@@ -1,0 +1,21 @@
+
+body {
+    background: url('cover.jpg') no-repeat center fixed;
+		width: 100%;
+		min-height: 90vh;
+		background-size: 100% 100%;
+}
+
+.location {
+	margin-left: 60%;
+	margin-top: 10%;
+}
+
+.countdown {
+	left: 60%;
+	transform: skew(40deg,0deg);
+}
+
+.entry {
+	font-family: 'Amatic SC', cursive;
+}
