@@ -9,12 +9,10 @@ body {
 }
 
 .location {
-  margin-left: 60%;
   margin-top: 10%;
 }
 
 .countdown {
-  left: 60%;
   transform: skew(40deg, 0deg);
 }
 
