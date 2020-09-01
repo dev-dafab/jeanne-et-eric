@@ -7,11 +7,13 @@ const x = setInterval(function () {
 
   // Time calculations for days, hours, minutes and seconds
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  const countdown = document.querySelector(".countdown");
+  const countdown = document.querySelector("#countdown");
 
   countdown.innerHTML = `${days} jours ${hours}h:${minutes}m:${seconds}s`;
 

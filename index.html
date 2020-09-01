@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -6,36 +6,29 @@
     <title>Tailwind Starter Template - Profile Card : Tailwind Toolbox</title>
     <link rel="manifest" href="./site.webmanifest" />
     <meta name="theme-color" content="#3b7977" />
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" charset="utf-8"></script>
-
     <title>
-      Tailwind Toolbox - Free Starter Templates and Components for Tailwind CSS
+      Jeanne and Eric wedding
     </title>
-
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/tailwindcss/dist/tailwind.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./style.css"
-    />
   </head>
 
-  <body class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover flex">
-    <span class="text-6xl countdown absolute entry text-white bottom-0">
-    </span>
-
-    <div class="location entry ml-8 text-white text-center">
+  <body>
+    <div class="flex">
+    <div class="entry ml-8 entry-color text-center">
       <h1 class="headline font-bold text-6xl antialiased">Jeanne & Eric</h2>
       <h2 class="text-5xl entry"> 11. Septembre 2020, 10:30 </h2>
       <h2 class="text-5xl entry"> Vigneux-sur-Seine, France </h2>
-          <button  class="text-5xl entry mt-8 bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-2 rounded" type="button">
-            Confirmez!
+          <button  onclick="showPage()" class="text-5xl entry mt-8 bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-2 rounded" type="button">
+            Programme
           </button>
+    </div>
+    <div id="countdown" class="text-xxl text-6xl entry entry-color absolute bottom-0 right-0 mr-8"></div>
     </div>
   </body>
 </html>
+
