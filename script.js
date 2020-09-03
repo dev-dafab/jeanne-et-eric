@@ -27,18 +27,16 @@ const x = setInterval(function () {
 const HomeComponent = {
     render: () => {
         return `
-<div class="flex bg-landing-page">
-    <div class="entry ml-8 entry-color text-center">
-        <h1 class="headline font-bold text-6xl antialiased">Jeanne & Eric</h1>
-        <h2 class="text-5xl entry"> 11. Septembre 2020, 10:30 </h2>
-        <h2 class="text-5xl entry"> Vigneux-sur-Seine, France </h2>
-        <button onclick="navigate('programme')" class="text-5xl entry mt-8 bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-2 rounded"
-                type="button">
+<div class="flex bg-landing-page z-10">
+    <div class="entry entry-color ml-auto mr-auto mt-10">
+        <h1 class="jeanne-eric-title ml-16 antialiased">Jeanne & Eric</h1>
+        <div class="ml-auto mr-auto text-center">
+        <button onclick="navigate('programme')" class="text-5xl entry mt-8 bg-gray-500  hover:bg-gray-600 text-white font-bold py-2 px-2 rounded" type="button">
           Programme
         </button>
+        </div>
     </div>
-    <div id="countdown"
-         class="countdown location text-3xl entry entry-color absolute bottom-0 right-0 ml-0 mt-0 mr-8"></div>
+    <div id="countdown" class="location entry font-bold absolute bottom-0 ml-0 mt-0 mr-8"></div>
 </div>
     `;
     }
@@ -46,45 +44,31 @@ const HomeComponent = {
 const ProgrammComponent = {
     render: () => {
         return `
-<div class="flex bg-programme-page">
-<h3>
-Nous avons le plaisir de vous convier à notre mariage
-<br/>
-qui aura lieu le vendredi 11 septembre 2020
+<div class="flex text-red-500 bg-programme-page flex-col">
+<h3 class="entry-font-family text-2xl mt-16 text-center">
+    Nous avons le plaisir de vous convier à notre mariage
+    qui aura lieu le vendredi 11 septembre 2020.
 </h3>
 
-<br/>
-<br/>
-<br/>
-
-<div>
-    <span>Cerémonie civille 10h30:</span>
-    <span>mairie de Vigneux-Sur-Seine</span>
-    <span>75 Rue Pere moi , 91270 Vigneux-sur-seine</span>
+<div class="text-center mt-10">
+<ul class="edward-script-font">
+<li>
+    Cerémonie civille 10h30:<br>
+    mairie Vigneux-sur-seine<br>
+    75 Rue Pierre marin, 91270 mairie Vigneux-sur-seine
+</li>
+<li class="mt-4">
+    Reception 12h00:<br>
+    mairie de Vigneux-sur-seine<br>
+    73 Rue Des Moulins, 91600 Savigny-sur-orge<br>
+</li>
+<ul>
 </div>
-<div>
-    <span>Reception 12h00:</span>
-    <span>mairie de Vigneux-Sur-Seine</span>
-    <span>75 Rue Pere moi , 91270 Vigneux-sur-seine</span>
-</div>
 
-<br/>
-<br/>
-<br/>
-
-<div>
+<div class="absolute bottom-0 entry-font-family text-2xl programm-footer text-center">
 Merci de partarger avec nous ce joyeux evenement sur un
 thème chick et glamour.
 </div>
-</div>
-        `;
-    }
-}
-const ErrorComponent = {
-    render: () => {
-        return `
-<div>
-<h3> Error </h3>
 </div>
         `;
     }

@@ -5,6 +5,7 @@ body {
 }
 
 .bg-landing-page {
+  z-index: -80;
   background-size: cover;
   height: 100vh;
   background: url("./bg_2.jpg") no-repeat;
@@ -19,17 +20,44 @@ body {
 }
 
 .location {
-  margin-top: 10%;
-}
-
-.countdown {
-  transform: skew(40deg, 0deg);
+  color: mintcream;
+  margin-left: 50px;
+  font-size: 55px;
 }
 
 .entry {
-  font-family: "Amatic SC", cursive;
+  font-family: "Edward Script", cursive;
 }
 
-.entry-color {
-  color: #e96d51;
+.entry-font-family {
+  font-family: "Edward Script", cursive;
 }
+
+.edward-script-font {
+  font-family: "Edward Script", cursive;
+}
+
+.jeanne-eric-title {
+  z-index: 40;
+  font-family: "Brush Script", cursive;
+  font-size: 196px;
+  color: mintcream;
+  margin-left: 200px;
+}
+
+button {
+  margin-left: 100px;
+  font-size: 55px;
+}
+
+.programm-footer {
+  margin-left: 27%;
+  margin-bottom: 2%;
+}
+
+.left {
+  position: absolute;
+  top: 200px;
+  right: 10px;
+}
+
