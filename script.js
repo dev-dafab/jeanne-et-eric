@@ -53,21 +53,20 @@ const ProgrammComponent = {
 <div class="text-center mt-10">
 <ul class="edward-script-font">
 <li>
-    Cerémonie civille 10h30:<br>
+    Cerémonie civille 10h30 :<br>
     mairie Vigneux-sur-seine<br>
     75 Rue Pierre marin, 91270 mairie Vigneux-sur-seine
 </li>
 <li class="mt-4">
-    Reception 12h00:<br>
-    mairie de Vigneux-sur-seine<br>
+    Reception 12h00 :<br>
     73 Rue Des Moulins, 91600 Savigny-sur-orge<br>
 </li>
 <ul>
 </div>
 
 <div class="absolute bottom-0 entry-font-family text-2xl programm-footer text-center">
-Merci de partarger avec nous ce joyeux evenement sur un
-thème chick et glamour.
+Merci de partarger avec nous ce joyeux événement sur un
+thème chic et tendance.
 </div>
 </div>
         `;
