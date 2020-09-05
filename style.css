@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: 0 1fr 0;
   grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
 }
 
 .content { grid-area: 1 / 2 / 2 / 3; }
@@ -17,14 +17,8 @@
 
 .bg-programme-page {
   height: 100vh;
-  background: url("./bg_1.jpg") no-repeat;
+  background: url("https://source.unsplash.com/wVU58mOgJtg/640x389") no-repeat center;
   background-size: cover;
-}
-
-.location {
-  color: mintcream;
-  margin-left: 50px;
-  font-size: 55px;
 }
 
 .color-mintcream {
@@ -51,18 +45,5 @@
 }
 
 button {
-  margin-left: 100px;
   font-size: 55px;
 }
-
-.programm-footer {
-  margin-left: 27%;
-  margin-bottom: 2%;
-}
-
-.left {
-  position: absolute;
-  top: 200px;
-  right: 10px;
-}
-
