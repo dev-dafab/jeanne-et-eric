@@ -1,5 +1,9 @@
 const countDownDate = new Date("09.11.2020 8:30:00").getTime();
 
+function navigate(path) {
+    window.location = `${window.location.href}#/${path}`;
+}
+
 const x = setInterval(function () {
     const now = new Date().getTime();
     // Find the distance between now and the count down date
@@ -27,16 +31,21 @@ const x = setInterval(function () {
 const HomeComponent = {
     render: () => {
         return `
-<div class="flex bg-landing-page z-10">
-    <div class="entry entry-color ml-auto mr-auto mt-10">
-        <h1 class="jeanne-eric-title ml-16 antialiased">Jeanne & Eric</h1>
-        <div class="ml-auto mr-auto text-center">
-        <button onclick="navigate('programme')" class="text-5xl entry mt-8 bg-gray-500  hover:bg-gray-600 text-white font-bold py-2 px-2 rounded" type="button">
+<div id="bg-landing-page" class="bg-landing-page content">
+<div class="h-full flex flex-col w-full">
+        <div class="-px-4 -py-4 flex flex-col ml-auto mr-auto md:flex-row">
+            <div class="jeanne-eric-title flex ml-auto mr-auto font-bold">Jeanne</div>
+            <div class="jeanne-eric-title flex ml-auto mr-auto font-bold">&</div>
+            <div class="jeanne-eric-title flex ml-auto mr-auto font-bold">Eric</div>
+        </div>
+        <button
+        class="text-5xl mt-24 ml-auto mr-auto px-20 entry bg-gray-500  hover:bg-gray-600 text-white font-bold py-2 rounded"
+        onclick="navigate('programme')"  type="button">
           Programme
         </button>
+        <div id="countdown" class="color-mintcream font-bold ml-auto mr-auto mt-auto">FFFFF</div>
         </div>
-    </div>
-    <div id="countdown" class="location entry font-bold absolute bottom-0 ml-0 mt-0 mr-8"></div>
+ </div>
 </div>
     `;
     }
@@ -80,7 +89,6 @@ const routes = [
 
 const parseLocation = () => location.hash.slice(1).toLowerCase() || '/';
 const findComponentByPath = (path, routes) => routes.find(r => r.path.match(new RegExp(`^\\${path}$`, 'gm'))) || undefined;
-const navigate = (path) => window.location = `${window.location.href}#/${path}`
 
 const router = () => {
     // Find the component based on the current path

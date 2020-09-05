@@ -1,19 +1,21 @@
-body {
-  width: 100%;
-  height: 100vh;
-  position: relative;
+.parent {
+  display: grid;
+  grid-template-columns: 0 1fr 0;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
+.content { grid-area: 1 / 2 / 2 / 3; }
+
+
 .bg-landing-page {
-  z-index: -80;
-  background-size: cover;
   height: 100vh;
-  background: url("./bg_2.jpg") no-repeat;
+  background: url("https://source.unsplash.com/xPPbXGbWnjA") no-repeat center;
   background-size: cover;
 }
 
 .bg-programme-page {
-  background-size: cover;
   height: 100vh;
   background: url("./bg_1.jpg") no-repeat;
   background-size: cover;
@@ -23,6 +25,11 @@ body {
   color: mintcream;
   margin-left: 50px;
   font-size: 55px;
+}
+
+.color-mintcream {
+  color: mintcream;
+  font-size: 5vw;
 }
 
 .entry {
@@ -38,11 +45,9 @@ body {
 }
 
 .jeanne-eric-title {
-  z-index: 40;
   font-family: "Brush Script", cursive;
-  font-size: 196px;
+  font-size: 11vw;
   color: mintcream;
-  margin-left: 200px;
 }
 
 button {
