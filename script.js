@@ -1,7 +1,10 @@
+let countDownCb;
+
 function countdown() {
+
     const countDownDate = new Date("09.11.2020 8:30:00").getTime();
 
-    const x = setInterval(function () {
+    countDownCb = setInterval(function () {
         const now = new Date().getTime();
         // Find the distance between now and the count down date
         const distance = countDownDate - now;
@@ -19,8 +22,8 @@ function countdown() {
         countdown.innerHTML = `${days} jours ${hours}h:${minutes}m:${seconds}s`;
 
         if (distance < 0) {
-            clearInterval(x);
-            countdown.innerHTML = "EXPIRED";
+            clearInterval(countDownCb);
+            countdown.innerHTML = "";
         }
     }, 1000);
 }
@@ -51,8 +54,8 @@ const HomeComponent = {
 const ProgrammComponent = {
     render: () => {
         return `
-<div class="bg-programme-page font-bold content">
-<div class="flex text-red-500  flex-col h-full">
+<div class="bg-programme-page text-red-600 font-bold content">
+<div class="flex text-red-600  flex-col h-full">
 <h3 class="entry-font-family text-2xl mt-4 text-center">
     Nous avons le plaisir de vous convier à notre mariage
     qui aura lieu le vendredi 11 septembre 2020.
@@ -60,14 +63,18 @@ const ProgrammComponent = {
 
 <div class="text-center mt-10">
 <ul class="edward-script-font">
-<li>
+<li class="font-xl font-extrabold z-40">
     Cérémonie civile, 10h30 :<br>
+    <a target="_blank" class="text-red-600 hover:text-red-800 hover:no-underline hover:skew-x-3" href="https://www.google.com/maps/place/Mairie+de+Vigneux-sur-Seine/@48.7001193,2.4148116,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67559e62332a1:0x633236356deaf240!8m2!3d48.7001193!4d2.4170003">
     mairie de Vigneux-Sur-Seine <br>
     75 rue Pierre Marin, Vigneux-sur-Seine 
+   </a>
 </li>
 <li class="mt-4">
     Réception, 12h00 : <br>
+    <a target="_blank" class="text-red-600 hover:text-red-800 hover:no-underline hover:skew-x-3" href="https://goo.gl/maps/PxUTjYuuLAqidxABA">
     73 rue Des Moulins, Savigny-sur-Orge<br>
+    </a>
 </li>
 <ul>
 </div>
@@ -97,8 +104,9 @@ const router = () => {
     // If there's no matching route, get the "Error" component
     const {component = HomeComponent} = findComponentByPath(path, routes) || {};
     if (component === HomeComponent) {
-        debugger;
         countdown();
+    } else {
+        clearTimeout(countDownCb);
     }
 
     document.getElementById('app').innerHTML = component.render();
